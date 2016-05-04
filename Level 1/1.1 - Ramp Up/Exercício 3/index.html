@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br", ng-app="store">
+<head>
+	<meta charset="utf-8"/>
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+	
+	<title>Curso AngularJs - Code School</title>
+
+	<link rel="styelsheet" type="text/css" href="Content/bootstrap.min.css" />
+	<script type="text/javascript" src="Scripts/angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</head>
+<body>
+		<!-- Nessa diretiva devemos incluir o nome da Controller e criar um alias -->
+		<!-- Lembrando que as diretivas do controller só serão vistas dentro da div devido
+			a inclusão da diretiva 'ng-controller' se colocar fora do escopo da div não irá imprimir!!! -->
+ 		<div ng-controller="StoreController as store">
+ 			<h1> {{store.produto.nome}} </h1>
+ 			<h2> R$ {{store.produto.preco}} </h2>
+ 			<p> {{store.produto.descricao}} </p>
+ 		</div>
+</body>
+</html>

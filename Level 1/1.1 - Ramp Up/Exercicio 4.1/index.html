@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="pt-br", ng-app="gemStore">
+<head>
+	<meta charset="utf-8"/>
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+	
+	<title>Curso AngularJs - Code School</title>
+
+	<link rel="styelsheet" type="text/css" href="Content/bootstrap.min.css" />
+	<script type="text/javascript" src="Scripts/angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</head>
+<body class="container" ng-controller="StoreController as store">
+ 	<div class="produto row" ng-repeat="produto in store.produtos">
+ 		<h3>{{produto.nome}}</h3>	
+ 		<em class="pull-right">R$ {{produto.preco}}</em>
+ 	</div>		
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br", ng-app="gemStore">
+<head>
+	<meta charset="utf-8"/>
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+	
+	<title>Curso AngularJs - Code School</title>
+
+	<link rel="styelsheet" type="text/css" href="Content/bootstrap.min.css" />
+	<script type="text/javascript" src="Scripts/angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+</head>
+<body ng-controller="StoreController as store"
+    <div class="product row">
+      <h3>
+        {{store.product.name}}
+        <em class="pull-right">{{store.product.price}}</em>
+      </h3>
+    </div>
+</body>
+</html>
