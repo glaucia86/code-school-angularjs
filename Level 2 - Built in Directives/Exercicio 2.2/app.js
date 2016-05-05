@@ -1,13 +1,13 @@
 (function() {
-  var app = angular.module('gemStore', []);
+  var app = angular.module('store', []);
 
   app.controller('StoreController', function(){
     this.products = gems;
   });
 
   var gems = [{
-      name: 'Azurite',
-      description: "Some gems have hidden qualities beyond their luster, beyond their shine... Azurite is one of those gems.",
+      name: 'Azurita',
+      description: "Algumas pérolas tem as suas qualidades escondidas que vão além do seu brilho. E Azurita é uma dessas jóias.",
       shine: 8,
       price: 110.50,
       rarity: 7,
@@ -20,18 +20,18 @@
       ],
       reviews: [{
         stars: 5,
-        body: "I love this gem!",
-        author: "joe@example.org",
+        body: "Eu simplesmente amo essa jóia!",
+        author: "skinclear86@gmail.com",
         createdOn: 1397490980837
       }, {
         stars: 1,
-        body: "This gem sucks.",
-        author: "tim@example.org",
+        body: "Esta jóia é muito ruim!",
+        author: "jake@gmail.com",
         createdOn: 1397490980837
       }]
     }, {
-      name: 'Bloodstone',
-      description: "Origin of the Bloodstone is unknown, hence its low value. It has a very high shine and 12 sides, however.",
+      name: 'Plasma',
+      description: "A origm da Plasma é desconhecida, por isso o seu baixo valor. Porém, apresenta um brilho sensacional em seus 12 lados.",
       shine: 9,
       price: 22.90,
       rarity: 6,
@@ -44,18 +44,18 @@
       ],
       reviews: [{
         stars: 3,
-        body: "I think this gem was just OK, could honestly use more shine, IMO.",
-        author: "JimmyDean@example.org",
+        body: "Eu acho essa jóia relativamente boa, poderia ter mais brilho...",
+        author: "jurema@gmail.com",
         createdOn: 1397490980837
       }, {
         stars: 4,
-        body: "Any gem with 12 faces is for me!",
-        author: "gemsRock@example.org",
+        body: "Ah! Qualquer jóia de 12 lados, simplesmente é a minha cara!",
+        author: "marcinha@gmail.com",
         createdOn: 1397490980837
       }]
     }, {
-      name: 'Zircon',
-      description: "Zircon is our most coveted and sought after gem. You will pay much to be the proud owner of this gorgeous and high shine gem.",
+      name: 'Zircão',
+      description: "Zircão é uma das jóias mais cobiçadas por todos. Você com certeza irá pagar muito caro por ela. Mas, pode ter certeza que sendo um proprietário desta jóia te deixará com muito mais brilho.",
       shine: 70,
       price: 1100,
       rarity: 2,
@@ -67,18 +67,18 @@
       ],
       reviews: [{
         stars: 1,
-        body: "This gem is WAY too expensive for its rarity value.",
-        author: "turtleguyy@example.org",
+        body: "Essa jóia é muito cara devido a sua raridade!",
+        author: "bruno@gmail.com",
         createdOn: 1397490980837
       }, {
         stars: 1,
-        body: "BBW: High Shine != High Quality.",
-        author: "LouisW407@example.org",
+        body: "Um conselho: Muito brilho != Alta qualidade!",
+        author: "luis@gmail.com",
         createdOn: 1397490980837
       }, {
         stars: 1,
-        body: "Don't waste your rubles!",
-        author: "nat@example.org",
+        body: "Gente! Não perda dinheiro comprando essa jóia!",
+        author: "lia@gmail.com",
         createdOn: 1397490980837
       }]
     }];

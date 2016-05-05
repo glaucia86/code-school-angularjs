@@ -7,22 +7,39 @@
 	<title>Curso AngularJs - Code School</title>
 
 	<link rel="styelsheet" type="text/css" href="Content/bootstrap.min.css" />
+	<link rel="stylesheet" type="text/css" href="Content/style.css" />
+
 	<script type="text/javascript" src="Scripts/angular.min.js"></script>
 	<script type="text/javascript" src="app.js"></script>
+
 </head>
 <body ng-controller="StoreController as store">
+
+	<!-- Header da Página -->
+	<header>
+		<h1 class="text-center">Jóias Flatlander Crafted</h1>
+		<h2 class="text-center">- Sejam Bem-Vindos -</h2>
+	</header>
+
     <!--  Products Container  -->
     <div class="list-group">
+
       <!--  Product Container  -->
-      <div class="list-group-item" ng-repeat="product in store.products">
+      <div class="list-group-item" ng-repeat="product in store.products | orderBy: '-price'">
         <h3>
           {{product.name}}
           <em class="pull-right">{{product.price | currency}}</em>
         </h3>
+
         <!-- Image Gallery  -->
-        <div class="gallery">
-          <img ng-src="{{product.images[0]}}"/>
+        <div class="gallery" ng-show="product.images.length">
+          <img class="img img-circle img-thumbnail center-block" ng-src="{{product.images[0]}}"/>
         </div>
+        <ul class="img-thumbnails clearfix">
+        	<li class="small-image-pull-left thumbnail" ng-repeat="image in product.images">
+        		<img ng-src="{{image}}"/>
+        	</li>	
+        </ul>
       </div>
     </div>
   </body>
