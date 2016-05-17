@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="gemStore">
+<head>
+	<meta charset="utf-8"/>
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+
+	<title>Shaping Up With Angular.Js - Glaucia Lemos</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+	<link rel="stylesheet" type="text/css" href="content/style.css" />
+
+	<script type="text/javascript" src="scripts/angular.min.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+
+</head>
+<body class="list-group bodyBackgroundColor" ng-controller="StoreController as store">
+
+	<!-- Header da Página -->
+ 	<div class="newJumbotron">
+ 		<header>
+ 			<h1 class="text-center">Glaucia Lemos Joias</h1>	
+ 			<h2 class="text-center">- A sua loja de joias do Rio de Janeiro -</h2>
+ 			<h3 class="text-center"> Sejam Bem-Vindos </h3>
+ 		</header>
+ 	</div>
+ 	<!-- Fim do Header da Página -->
+
+ 	<!--Container dos Produtos--> 
+ 	<div class="list-group-item" ng-repeat="product in store.products">
+ 		<h3 class="text-center">
+ 			{{product.name}}
+ 			<em class="pull-right">{{product.price | currency}}</em>
+ 		</h3>	
+
+ 		<!-- Galeria de Imagens -->
+ 		<div class="gallery" ng-show="product.images.length">
+ 			<img ng-src="{{product.images[0]}}"/>
+ 			<ul class="list-inline thumbs">
+ 				<li class="thumbnail" ng-repeat="image in product.images">
+ 					<img ng-src="{{image}}"/>
+ 				</li>
+ 			</ul>
+ 		</div>
+ 		<!-- Fim da Galeria de Imagens -->
+
+ 		<section class="tab" ng-controller="TabController as tab" >
+ 			<ul class="nav nav-pills">
+ 				<li ng-class="{ active: tab.isSet(1)}">
+ 					<a href ng-click="tab.setTab(1)">Descrição</a>
+ 				</li>
+
+ 				<li ng-class="{ active: tab.isSet(2)}">
+ 					<a href ng-click="tab.setTab(2)">Especificações</a>
+ 				</li>
+
+ 				<li ng-class="{ active: tab.isSet(3)}">
+ 					<a href ng-click="tab.setTab(3)">Reviews</a>
+ 				</li>
+ 			</ul>
+			
+			<!-- Parte do código responsável por apresentar as informações de cada tab clicada -->
+ 			<div ng-show="tab.isSet(1)">
+ 				<h4>Descrição</h4>
+ 				<blockquote>{{product.description}}</blockquote>
+ 			</div>	
+ 			<div ng-show="tab.isSet(2)">
+ 				<h4>Especificações</h4>
+ 				<blockquote>Brilho: {{product.shine}}</blockquote>
+ 			</div>
+ 			<div ng-show="tab.isSet(3)">
+ 				<h4>Reviews</h4>
+ 			</div>
+ 		</section>
+ 	</div>
+</body>
+</html>
