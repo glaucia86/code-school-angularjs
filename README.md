@@ -2,4 +2,6 @@
 
 Exercícios realizados durante o curso com os códigos de cada nível.
 
+- [Shaping Up With Angular.Js Demo application by Glaucia Lemos] (http://glaucia86.github.io/gemStore/)
+
 
