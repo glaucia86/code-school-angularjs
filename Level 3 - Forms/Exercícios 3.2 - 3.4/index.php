@@ -117,7 +117,7 @@
 				</fieldset>
 
 				<fieldset class="form-group">
-					<input type="submit" class="btn btn-primary pull-right" value="Enviar Review">
+					<input type="submit" class="btn btn-primary pull-right" value="Enviar">
 				</fieldset>
 			</form>
 			<!--Fim do Form da Review-->
