@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="gemStore">
+  <head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1" name="viewport">
+    <title>Shaping Up With Angular.Js - Glaucia Lemos</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+    <link rel="stylesheet" type="text/css" href="content/style.css" />
+    <script type="text/javascript" src="scripts/angular.min.js"></script>
+    <script type="text/javascript" src="scripts/app.js"></script>
+    <script type="text/javascript" src="scripts/products.js"></script>
+  </head>
+  <body class="list-group bodyBackgroundColor" ng-controller="StoreController as store">
+
+    <!-- Header da Página -->
+    <div>
+      <header id="header" class="newJumbotron">
+        <h1 class="text-center">Glaucia Lemos Joias</h1>
+        <h2 class="text-center">- A sua loja de joias do Rio de Janeiro -</h2>
+        <h3 class="text-center"> Sejam Bem-Vindos </h3>
+      </header>
+    </div>
+    <!-- Fim do Header da Página -->
+
+    <!--Container dos Produtos--> 
+    <div class="list-group">
+
+      <!-- Container do Produto Atual -->	
+      <div class="list-group-item" ng-repeat="product in store.products">
+        <h3>{{product.name}} <em class="pull-right">{{product.price | currency}}</em></h3>
+
+        <!--Galeria de Imagens-->
+        <product-gallery></product-gallery>
+
+        <!-- Product Tabs  -->
+        <product-tabs></product-tabs>
+      </div>
+    </div>
+  </body>
+</html>
